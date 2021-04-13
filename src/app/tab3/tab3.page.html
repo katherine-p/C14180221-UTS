@@ -1,0 +1,16 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div *ngFor="let data of isiData | async;">
+    <div *ngIf="data.judul == index">
+      <h1>{{ data.judul }}</h1> 
+    </div>
+        
+  </div>
+</ion-content>

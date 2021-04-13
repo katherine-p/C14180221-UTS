@@ -1,0 +1,16 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      List of Notes
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-list>
+    <ion-item *ngFor="let data of isiData | async;">
+      <h1>{{ data.judul }}</h1><ion-button shape="round" (click)="detail(data.judul)">See detail</ion-button>      
+    </ion-item>
+    
+  </ion-list>
+</ion-content>

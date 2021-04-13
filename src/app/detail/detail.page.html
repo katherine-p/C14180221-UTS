@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>detail</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div *ngFor="let data of isiData | async;">
+    <div *ngIf="data.judul == index">      
+      <h1>{{ data.judul }}</h1>
+      <p>{{data.isi}}</p>
+      <p>{{data.nilai}}</p>
+      <small>{{data.tgl}}</small><br><br>
+      <ion-button size="small" color="danger" (click)="delete()">Delete</ion-button>
+      <ion-button size="small" color="primary" (click)="update()">Update</ion-button> 
+    </div>
+        
+  </div>
+</ion-content>

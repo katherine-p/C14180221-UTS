@@ -1,0 +1,67 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Input Notes
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="container">
+    <table>
+      <tr>
+        <td><label for="">Judul</label></td>
+        <td><ion-input placeholder="Input judul" [(ngModel)]="in_judul"></ion-input></td>
+      </tr>
+      <tr>
+        <td><label for="">Isi</label></td>
+        <td><textarea name="" id="" cols="100%" rows="5" [(ngModel)]="in_isi" placeholder="Input isi"></textarea></td>
+      </tr>
+      <tr>
+        <td><label for="">Tanggal</label></td>
+        <td><input type="date" [(ngModel)]="in_tgl" placeholder="Input tanggal"></td>
+      </tr>
+      <tr>
+        <td><label for="">Nilai note</label></td>
+        <td><ion-input placeholder="Input Nilai" [(ngModel)]="in_nilai"></ion-input></td>
+      </tr>
+      <tr>
+        <td><label for="">Upload image</label></td>
+       
+        <td><ion-button (click)="foto()">
+          <ion-icon name="camera-sharp"></ion-icon>
+        </ion-button></td>
+      </tr>
+      <tr>
+        <td colspan="2">
+          <ion-grid>
+            <ion-row>
+              <ion-col size="3" *ngFor="let getfoto of fotoService.dataFoto; index as position">
+                <ion-img [src]="getfoto.webviewPath"></ion-img>        
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </td>
+      </tr>
+      <tr>
+        <td><ion-button shape="round" color="success" (click)="save()">Save</ion-button> <ion-button (click)="upload()">upload foto</ion-button> </td>
+      </tr>
+      <!-- <tr>
+        <td colspan="2"><h4>List</h4></td>
+      </tr>
+      <tr>
+        <td colspan="2">
+          <div *ngFor="let j of arr_judul; let i = index">
+            {{ i+1 }}. {{j}}  <ion-button size="small" color="primary" (click)="seedetail(i)">See detail</ion-button>
+          </div>
+        </td>
+      </tr> -->
+    </table>
+    
+    
+
+    
+
+  </div>
+  
+</ion-content>

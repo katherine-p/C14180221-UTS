@@ -1,0 +1,7 @@
+{
+  "name": "utsapp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
